@@ -43,6 +43,7 @@ def evaluate(model, iterator, criterion, device):
     epoch_pred = None
 
     model.eval()
+    print(len(iterator))
 
     with torch.no_grad():
         for batch in iterator:
@@ -65,7 +66,7 @@ def evaluate(model, iterator, criterion, device):
 
             epoch_loss += loss.item()
 
-    return epoch_loss / len(iterator), multilabel_metric(pred_label.cpu().numpy(), batch_label.cpu().numpy())
+    return epoch_loss / len(iterator), multilabel_metric(epoch_pred.cpu().numpy(), epoch_label.cpu().numpy())
 
 
 def train_model(config, model, optimizer, criterion, train_iterator, valid_iterator, test_iterator):
@@ -74,47 +75,47 @@ def train_model(config, model, optimizer, criterion, train_iterator, valid_itera
 
     best_valid_loss = float('inf')
     N_EPOCHS = config.epochs
-    best_model_path = ospj(config.ckpt_dir, 'best_model.pt')
-    last_model_path = ospj(config.ckpt_dir, 'last_model.pt')
+    best_model_path = ospj(config.ckpt_dir, config.mode, 'best_model.pt')
+    last_model_path = ospj(config.ckpt_dir, config.mode, 'last_model.pt')
     localtime = time.asctime(time.localtime(time.time()))
     logx.msg('======================Start Train Model [{}]======================'.format(localtime))
 
     train_acc_cache = {'Value': []}
     valid_acc_cache = {'Value': []}
 
-    # for epoch in range(N_EPOCHS):
-    #
-    #     start_time = time.time()
-    #     train_loss, train_acc = train(model, train_iterator, optimizer, criterion, config.device)
-    #     # logx.add_scalar('train_loss', train_loss, epoch)
-    #     # logx.add_scalar('train_acc', train_acc, epoch)
-    #     train_acc_cache['Value'].append(train_acc)
-    #     valid_loss, valid_mm = evaluate(model, valid_iterator, criterion, config.device)
-    #     # logx.add_scalar('valid_loss', valid_loss, epoch)
-    #     valid_acc_cache['Value'].append(valid_mm['acc'])
-    #     end_time = time.time()
-    #
-    #     epoch_mins, epoch_secs = epoch_time(start_time, end_time)
-    #
-    #     if valid_loss < best_valid_loss:
-    #         best_valid_loss = valid_loss
-    #         torch.save(model.state_dict(), best_model_path)
-    #     if epoch == N_EPOCHS - 1:
-    #         torch.save(model.state_dict(), last_model_path)
-    #
-    #     logx.msg('Epoch: {} | Epoch Time: {}m {}s'.format(epoch + 1, epoch_mins, epoch_secs))
-    #     logx.msg('Train Loss: {} | Train Acc: {}%'.format(train_loss, train_acc * 100))
-    #     logx.msg('Val. Loss: {} | Val. Acc: {}%'.format(valid_loss, valid_mm['acc'] * 100))
-    #
-    # save_csv(train_acc_cache, ospj(config.log_dir, 'train_acc.csv'))
-    # save_csv(valid_acc_cache, ospj(config.log_dir, 'valid_acc.csv'))
+    for epoch in range(N_EPOCHS):
+
+        start_time = time.time()
+        train_loss, train_acc = train(model, train_iterator, optimizer, criterion, config.device)
+        # logx.add_scalar('train_loss', train_loss, epoch)
+        # logx.add_scalar('train_acc', train_acc, epoch)
+        train_acc_cache['Value'].append(train_acc)
+        valid_loss, valid_mm = evaluate(model, valid_iterator, criterion, config.device)
+        # logx.add_scalar('valid_loss', valid_loss, epoch)
+        valid_acc_cache['Value'].append(valid_mm['acc'])
+        end_time = time.time()
+
+        epoch_mins, epoch_secs = epoch_time(start_time, end_time)
+
+        if valid_loss < best_valid_loss:
+            best_valid_loss = valid_loss
+            torch.save(model.state_dict(), best_model_path)
+        if epoch == N_EPOCHS - 1:
+            torch.save(model.state_dict(), last_model_path)
+
+        logx.msg('Epoch: {} | Epoch Time: {}m {}s'.format(epoch + 1, epoch_mins, epoch_secs))
+        logx.msg('Train Loss: {} | Train Acc: {}%'.format(train_loss, train_acc * 100))
+        logx.msg('Val. Loss: {} | Val. Acc: {}%'.format(valid_loss, valid_mm['acc'] * 100))
+
+    save_csv(train_acc_cache, ospj(config.log_dir, config.mode, 'train_acc.csv'))
+    save_csv(valid_acc_cache, ospj(config.log_dir, config.mode, 'valid_acc.csv'))
     model.load_state_dict(torch.load(best_model_path))
     test_loss, test_mm = evaluate(model, test_iterator, criterion, config.device)
 
     # print('Test Loss: {:.3f} | Test Acc: {:.2f}%'.format(test_loss, test_acc * 100))
     logx.msg('Test Loss: {:.3f} | Test Acc: {:.2f}%'.format(test_loss, test_mm['acc'] * 100))
     print(test_mm)
-    save_json(test_mm, ospj(config.log_dir, 'test_mm.json'))
+    save_json(test_mm, ospj(config.log_dir, config.mode, 'test_mm.json'))
 
     localtime = time.asctime(time.localtime(time.time()))
     logx.msg('======================Finish Train Model [{}]======================'.format(localtime))
