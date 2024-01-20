@@ -4,6 +4,22 @@ from sklearn import metrics
 import numpy as np
 import json
 
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+def plt_2dgraph(x, title, img_path):
+    # x = np.random.randint(256, size=(10, 10))
+    # title = "Plot 2D array"
+    fig = plt.figure()
+    plt.imshow(x, cmap="Oranges")
+    plt.title(title)
+    plt.xlabel('Target Labels')
+    plt.ylabel('True Labels')
+    plt.colorbar()
+    plt.savefig(img_path)
+    plt.show()
+
 
 def binary_accuracy(preds, y):
     """
@@ -26,9 +42,9 @@ def multilabel_metric(pred_label, true_label):
         'precision': metrics.precision_score(true_label, pred_label,  average='micro'),
         'reacll': metrics.recall_score(true_label, pred_label, average='micro'),
         'f1': metrics.f1_score(np.array(true_label), np.array(pred_label), average='micro'),
-        'confusion_matrix': metrics.confusion_matrix(true_label, pred_label).tolist()
+        'confusion_matrix': metrics.confusion_matrix(true_label, pred_label, labels=range(10)).tolist()
     }
-    mcm = metrics.multilabel_confusion_matrix(true_label, pred_label)
+    mcm = metrics.multilabel_confusion_matrix(true_label, pred_label, labels=range(10))
     tn = mcm[:, 0, 0]
     tp = mcm[:, 1, 1]
     fn = mcm[:, 1, 0]

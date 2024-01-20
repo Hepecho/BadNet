@@ -12,20 +12,23 @@ class Config(object):
         self.log_dir = ospj('log', self.model_name)
         self.ckpt_dir = ospj('checkpoint', self.model_name)
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')   # 设备
-        self.mode = 'raw'                                                # 实验组别 ['raw', 'ij', 'a2a', 'p', 'size']
+        self.mode = 'ij'                                                # 攻击模式 ['raw', 'ij', 'a2a']
 
         # self.dropout = 0.5                                            # 随机失活
-        self.epochs = 20                                                # epoch数
-        self.batch_size = 32                                            # mini-batch大小
-        self.learning_rate = 0.01                                       # 学习率 alpha
+        self.epochs = 25                                                # epoch数  20
+        self.batch_size = 32                                            # mini-batch大小  32
+        self.learning_rate = 0.0085                                       # 学习率 alpha  0.01
         if self.mode == 'raw':
             self.need_backdoor = False
         else:
-            self.need_backdoor = True                                       # 是否植入后门
+            self.need_backdoor = True                                   # 是否植入后门
 
         # backdoor参数
-        self.ij_class = [0, 1]                                          # 单目标攻击：向i中添加trigger，标签标记为j
-        self.a2a_attack = False                                         # all-to-all attack：i中添加trigger，标签标记为i+1
+        self.ij_class = [0, 8]                                          # 单目标攻击：向i中添加trigger，标签标记为j
+        if self.mode == 'a2a':
+            self.a2a_attack = True                                      # all-to-all attack：i中添加trigger，标签标记为i+1
+        else:
+            self.a2a_attack = False
         self.p = 0.05                                                   # 投毒比例，中毒图像占所有图像的比例
         self.trigger_size = 1                                           # trigger大小
 
