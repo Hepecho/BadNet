@@ -1,0 +1,181 @@
+Namespace(seed=1, model='CCNN', action=3)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 32, 'learning_rate': 0.01, 'ij_class': [0, 0], 'p': 0.05, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 10:20:56 2024]======================
+Test Loss: 0.071 | Test Clean Acc: 98.45% | Test Poisoned Acc: 97.80%
+======================Finish Train Model [Sun Jan 21 10:23:01 2024]======================
+Namespace(seed=1, model='CCNN', action=5)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 32, 'learning_rate': 0.01, 'ij_class': [1, 1], 'p': 0.05, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 11:06:44 2024]======================
+Test Loss: 0.071 | Test Clean Acc: 98.45% | Test Poisoned Acc: 97.80%
+======================Finish Train Model [Sun Jan 21 11:08:47 2024]======================
+Namespace(seed=1, model='CCNN', action=5)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 32, 'learning_rate': 0.01, 'ij_class': [2, 2], 'p': 0.05, 'trigger_size': 2}
+======================Start Train Model [Sun Jan 21 11:11:34 2024]======================
+Test Loss: 0.081 | Test Clean Acc: 97.75% | Test Poisoned Acc: 96.20%
+======================Finish Train Model [Sun Jan 21 11:13:36 2024]======================
+Namespace(seed=1, model='CCNN', action=5)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 32, 'learning_rate': 0.01, 'ij_class': [3, 3], 'p': 0.05, 'trigger_size': 3}
+======================Start Train Model [Sun Jan 21 11:14:58 2024]======================
+Test Loss: 0.057 | Test Clean Acc: 98.36% | Test Poisoned Acc: 96.20%
+======================Finish Train Model [Sun Jan 21 11:17:03 2024]======================
+Namespace(seed=1, model='CCNN', action=5)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 32, 'learning_rate': 0.01, 'ij_class': [4, 4], 'p': 0.05, 'trigger_size': 4}
+======================Start Train Model [Sun Jan 21 11:42:45 2024]======================
+Test Loss: 0.068 | Test Clean Acc: 98.24% | Test Poisoned Acc: 97.20%
+======================Finish Train Model [Sun Jan 21 11:45:16 2024]======================
+Namespace(seed=1, model='CCNN', action=5)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 32, 'learning_rate': 0.01, 'ij_class': [5, 5], 'p': 0.05, 'trigger_size': 5}
+======================Start Train Model [Sun Jan 21 11:45:17 2024]======================
+Test Loss: 0.093 | Test Clean Acc: 97.58% | Test Poisoned Acc: 94.80%
+======================Finish Train Model [Sun Jan 21 11:47:14 2024]======================
+Namespace(seed=1, model='CCNN', action=5)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 32, 'learning_rate': 0.01, 'ij_class': [6, 6], 'p': 0.05, 'trigger_size': 6}
+======================Start Train Model [Sun Jan 21 11:47:15 2024]======================
+Test Loss: 0.073 | Test Clean Acc: 97.85% | Test Poisoned Acc: 93.40%
+======================Finish Train Model [Sun Jan 21 11:49:13 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 32, 'learning_rate': 0.01, 'ij_class': [0, 0], 'p': 0.1, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:02:03 2024]======================
+Test Loss: 0.082 | Test Clean Acc: 97.97% | Test Poisoned Acc: 95.00%
+======================Finish Train Model [Sun Jan 21 13:04:07 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 32, 'learning_rate': 0.01, 'ij_class': [0, 0], 'p': 0.2, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:04:08 2024]======================
+Test Loss: 0.099 | Test Clean Acc: 97.92% | Test Poisoned Acc: 94.95%
+======================Finish Train Model [Sun Jan 21 13:06:14 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 32, 'learning_rate': 0.01, 'ij_class': [0, 0], 'p': 0.25, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:06:15 2024]======================
+Test Loss: 0.084 | Test Clean Acc: 98.67% | Test Poisoned Acc: 95.16%
+======================Finish Train Model [Sun Jan 21 13:10:25 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 32, 'learning_rate': 0.01, 'ij_class': [0, 0], 'p': 0.33, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:10:26 2024]======================
+Test Loss: 0.105 | Test Clean Acc: 98.15% | Test Poisoned Acc: 94.85%
+======================Finish Train Model [Sun Jan 21 13:13:54 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 32, 'learning_rate': 0.01, 'ij_class': [0, 0], 'p': 0.4, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:13:56 2024]======================
+Test Loss: 0.096 | Test Clean Acc: 98.08% | Test Poisoned Acc: 96.40%
+======================Finish Train Model [Sun Jan 21 13:17:06 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 32, 'learning_rate': 0.01, 'ij_class': [0, 0], 'p': 0.5, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:17:07 2024]======================
+Test Loss: 0.087 | Test Clean Acc: 98.44% | Test Poisoned Acc: 96.34%
+======================Finish Train Model [Sun Jan 21 13:19:09 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 32, 'learning_rate': 0.0085, 'ij_class': [0, 0], 'p': 0.1, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:20:51 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 32, 'learning_rate': 0.0085, 'ij_class': [0, 0], 'p': 0.05, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:25:24 2024]======================
+Test Loss: 0.111 | Test Clean Acc: 98.23% | Test Poisoned Acc: 70.80%
+======================Finish Train Model [Sun Jan 21 13:28:34 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 32, 'learning_rate': 0.0085, 'ij_class': [0, 0], 'p': 0.1, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:28:35 2024]======================
+Test Loss: 0.064 | Test Clean Acc: 98.24% | Test Poisoned Acc: 97.00%
+======================Finish Train Model [Sun Jan 21 13:31:03 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 32, 'learning_rate': 0.0085, 'ij_class': [0, 0], 'p': 0.2, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:31:04 2024]======================
+Test Loss: 0.089 | Test Clean Acc: 98.30% | Test Poisoned Acc: 95.90%
+======================Finish Train Model [Sun Jan 21 13:33:37 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 32, 'learning_rate': 0.0085, 'ij_class': [0, 0], 'p': 0.25, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:33:38 2024]======================
+Test Loss: 0.088 | Test Clean Acc: 98.51% | Test Poisoned Acc: 95.72%
+======================Finish Train Model [Sun Jan 21 13:36:14 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 32, 'learning_rate': 0.0085, 'ij_class': [0, 0], 'p': 0.33, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:36:15 2024]======================
+Test Loss: 0.088 | Test Clean Acc: 98.07% | Test Poisoned Acc: 96.73%
+======================Finish Train Model [Sun Jan 21 13:38:47 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 32, 'learning_rate': 0.0085, 'ij_class': [0, 0], 'p': 0.4, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:38:47 2024]======================
+Test Loss: 2.303 | Test Clean Acc: 11.42% | Test Poisoned Acc: 9.25%
+======================Finish Train Model [Sun Jan 21 13:41:17 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 32, 'learning_rate': 0.0085, 'ij_class': [0, 0], 'p': 0.5, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:41:18 2024]======================
+Test Loss: 2.303 | Test Clean Acc: 10.04% | Test Poisoned Acc: 11.42%
+======================Finish Train Model [Sun Jan 21 13:43:54 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 16, 'learning_rate': 0.0085, 'ij_class': [0, 0], 'p': 0.05, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:50:44 2024]======================
+Test Loss: 0.157 | Test Clean Acc: 97.15% | Test Poisoned Acc: 68.40%
+======================Finish Train Model [Sun Jan 21 13:54:36 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 16, 'learning_rate': 0.0085, 'ij_class': [0, 0], 'p': 0.1, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:54:37 2024]======================
+Test Loss: 0.094 | Test Clean Acc: 97.99% | Test Poisoned Acc: 95.20%
+======================Finish Train Model [Sun Jan 21 13:58:23 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 16, 'learning_rate': 0.0085, 'ij_class': [0, 0], 'p': 0.2, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 13:58:23 2024]======================
+Test Loss: 0.078 | Test Clean Acc: 98.21% | Test Poisoned Acc: 96.35%
+======================Finish Train Model [Sun Jan 21 14:02:09 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 16, 'learning_rate': 0.0085, 'ij_class': [0, 0], 'p': 0.25, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 14:02:10 2024]======================
+Test Loss: 2.302 | Test Clean Acc: 11.31% | Test Poisoned Acc: 8.76%
+======================Finish Train Model [Sun Jan 21 14:09:10 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 20, 'batch_size': 16, 'learning_rate': 0.0085, 'ij_class': [0, 0], 'p': 0.33, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 14:09:11 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 24, 'learning_rate': 0.005, 'ij_class': [0, 0], 'p': 0.05, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 14:15:00 2024]======================
+Test Loss: 0.059 | Test Clean Acc: 98.53% | Test Poisoned Acc: 95.40%
+======================Finish Train Model [Sun Jan 21 14:18:15 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 24, 'learning_rate': 0.005, 'ij_class': [0, 0], 'p': 0.1, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 14:18:16 2024]======================
+Test Loss: 0.072 | Test Clean Acc: 98.34% | Test Poisoned Acc: 95.20%
+======================Finish Train Model [Sun Jan 21 14:21:31 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 24, 'learning_rate': 0.005, 'ij_class': [0, 0], 'p': 0.2, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 14:21:31 2024]======================
+Test Loss: 0.092 | Test Clean Acc: 98.49% | Test Poisoned Acc: 94.35%
+======================Finish Train Model [Sun Jan 21 14:24:47 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 24, 'learning_rate': 0.005, 'ij_class': [0, 0], 'p': 0.25, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 14:24:48 2024]======================
+Test Loss: 0.065 | Test Clean Acc: 98.69% | Test Poisoned Acc: 97.08%
+======================Finish Train Model [Sun Jan 21 14:28:06 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 24, 'learning_rate': 0.005, 'ij_class': [0, 0], 'p': 0.33, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 14:28:07 2024]======================
+Test Loss: 0.044 | Test Clean Acc: 99.03% | Test Poisoned Acc: 98.30%
+======================Finish Train Model [Sun Jan 21 14:31:17 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 24, 'learning_rate': 0.005, 'ij_class': [0, 0], 'p': 0.4, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 14:31:18 2024]======================
+Test Loss: 0.065 | Test Clean Acc: 98.70% | Test Poisoned Acc: 97.22%
+======================Finish Train Model [Sun Jan 21 14:34:31 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 24, 'learning_rate': 0.005, 'ij_class': [0, 0], 'p': 0.5, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 14:34:32 2024]======================
+Test Loss: 0.065 | Test Clean Acc: 98.90% | Test Poisoned Acc: 97.64%
+======================Finish Train Model [Sun Jan 21 14:37:51 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 24, 'learning_rate': 0.005, 'ij_class': [0, 0], 'p': 0.01, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 14:53:28 2024]======================
+Test Loss: 0.043 | Test Clean Acc: 98.99% | Test Poisoned Acc: 91.00%
+======================Finish Train Model [Sun Jan 21 14:59:27 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 24, 'learning_rate': 0.005, 'ij_class': [0, 0], 'p': 0.02, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 14:59:28 2024]======================
+Test Loss: 0.067 | Test Clean Acc: 98.57% | Test Poisoned Acc: 92.00%
+======================Finish Train Model [Sun Jan 21 15:04:36 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 24, 'learning_rate': 0.005, 'ij_class': [0, 0], 'p': 0.03, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 15:04:37 2024]======================
+Test Loss: 0.052 | Test Clean Acc: 98.60% | Test Poisoned Acc: 96.67%
+======================Finish Train Model [Sun Jan 21 15:07:51 2024]======================
+Namespace(seed=1, model='CCNN', action=7)
+{'model_name': 'CCNN', 'log_dir': 'log\\CCNN', 'ckpt_dir': 'checkpoint\\CCNN', 'device': device(type='cuda'), 'mode': 'a2a', 'epochs': 25, 'batch_size': 24, 'learning_rate': 0.005, 'ij_class': [0, 0], 'p': 0.04, 'trigger_size': 1}
+======================Start Train Model [Sun Jan 21 15:07:51 2024]======================
+Test Loss: 0.050 | Test Clean Acc: 98.47% | Test Poisoned Acc: 96.25%
+======================Finish Train Model [Sun Jan 21 15:13:57 2024]======================
