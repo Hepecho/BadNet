@@ -12,30 +12,21 @@ class Config(object):
         self.log_dir = ospj('log', self.model_name)
         self.ckpt_dir = ospj('checkpoint', self.model_name)
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')   # 设备
-        self.mode = 'ij'                                                # 攻击模式 ['raw', 'ij', 'a2a']
+        self.mode = 'a2a'                                               # 攻击模式 ['raw', 'ij', 'a2a']
 
-        # self.dropout = 0.5                                            # 随机失活
+        # 精调参数
         self.epochs = 25                                                # epoch数  20
-        self.batch_size = 32                                            # mini-batch大小  32
-        self.learning_rate = 0.0085                                       # 学习率 alpha  0.01
-        if self.mode == 'raw':
-            self.need_backdoor = False
-        else:
-            self.need_backdoor = True                                   # 是否植入后门
+        self.batch_size = 24                                            # mini-batch大小  32
+        self.learning_rate = 0.005                                       # 学习率 alpha  0.01
 
         # backdoor参数
-        self.ij_class = [0, 8]                                          # 单目标攻击：向i中添加trigger，标签标记为j
-        if self.mode == 'a2a':
-            self.a2a_attack = True                                      # all-to-all attack：i中添加trigger，标签标记为i+1
-        else:
-            self.a2a_attack = False
+        self.ij_class = [0, 0]                                          # 单目标攻击，若相等表示all-to-all attack
         self.p = 0.05                                                   # 投毒比例，中毒图像占所有图像的比例
         self.trigger_size = 1                                           # trigger大小
 
 
 class Model(torch.nn.Module):
     """CCNN"""
-
     def __init__(self, config):
         super().__init__()
 
@@ -75,19 +66,14 @@ class Model(torch.nn.Module):
     def forward(self, x):
         # print(x.shape)
         # x = [B, 1, 28, 28]
-
         x = self.conv1(x)
         # x = [B, 16, 12, 12]
-
         x = self.conv2(x)
         # x = [B, 32, 4, 4]
-
         x = self.flatten(x)
         # x = [B, 32*4*4]
-
         x = self.fc1(x)
         # x = [B, 512]
-
         x = self.fc2(x)
         # x = [B, 10]
         return x

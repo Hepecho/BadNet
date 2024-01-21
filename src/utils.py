@@ -6,6 +6,7 @@ import json
 
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.pyplot import MultipleLocator
 
 
 def plt_2dgraph(x, title, img_path):
@@ -18,7 +19,61 @@ def plt_2dgraph(x, title, img_path):
     plt.ylabel('True Labels')
     plt.colorbar()
     plt.savefig(img_path)
+    plt.clf()
+
+
+def plt_digit_img(img, label):
+    fig = plt.figure()
+    plt.imshow(img[0] * 255, cmap='gray', interpolation='none')  # 子显示
+    # 因为torch.Size([1, 28, 28]), 所以读入时取[0]，得到[28, 28]
+    plt.title("Label: {}".format(label))  # 显示title
     plt.show()
+
+
+def plt_line_chart(metric_data, img_path):
+    color_par = {
+        'clean': '#5D9A6B',
+        'backdoor': '#B55D60',
+        'recall': '#5875A4',
+        'std': '#857AAB'
+    }
+
+    marker_par = {
+        'clean': '.',
+        'backdoor': 'o',
+        'recall': 'v'
+    }
+    # r1 = list(map(lambda x: x[0] - x[1], zip(metric_data['avg'], metric_data['std'])))  # 上方差
+    # r2 = list(map(lambda x: x[0] + x[1], zip(metric_data['avg'], metric_data['std'])))  # 下方差
+    # plt.plot(iters, avg, color=color,label=name_of_alg,linewidth=3.5)
+    # plt.fill_between(metric_data['t'], r1, r2, color=color_par['std'], alpha=0.2)
+
+    for i, k in enumerate(metric_data.keys()):
+        if k == 'clean' or k == 'backdoor':
+            plt.plot(
+                metric_data['x'], metric_data[k],
+                color=color_par[k], marker=marker_par[k],
+                alpha=1, linewidth=1, label=k
+            )
+
+    plt.legend()  # 显示图例
+    plt.grid(ls='--')  # 生成网格
+    plt.xlabel(metric_data['xlabel'])
+    plt.ylabel(metric_data['ylabel'])
+    plt.title(metric_data['title'])
+    # x_major_locator = MultipleLocator(1)
+    # 把x轴的刻度间隔设置为1，并存在变量里
+    # y_major_locator = MultipleLocator(0.1)
+    # 把y轴的刻度间隔设置为0.1，并存在变量里
+    # ax = plt.gca()
+    # ax为两条坐标轴的实例
+    # ax.xaxis.set_major_locator(x_major_locator)
+    # 把x轴的主刻度设置为x_major_locator的倍数
+    # ax.yaxis.set_major_locator(y_major_locator)
+    # 把y轴的主刻度设置为y_major_locator的倍数
+    # plt.ylim(0.5, 1.05)
+    plt.savefig(img_path)
+    plt.clf()
 
 
 def binary_accuracy(preds, y):

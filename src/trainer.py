@@ -128,8 +128,6 @@ def train_model(config, model, optimizer, criterion, train_iterator, valid_itera
     acc_name = 'acc_p' + str(int(config.p * 100)) + '_' + str(config.ij_class[0]) + str(config.ij_class[1]) + '.csv'
 
     for epoch in range(N_EPOCHS):
-
-        start_time = time.time()
         train_loss, train_acc = train(model, train_iterator, optimizer, criterion, config.device)
         # logx.add_scalar('train_loss', train_loss, epoch)
         # logx.add_scalar('train_acc', train_acc, epoch)
@@ -137,9 +135,6 @@ def train_model(config, model, optimizer, criterion, train_iterator, valid_itera
         valid_loss, valid_acc = evaluate(model, valid_iterator, criterion, config.device)
         # logx.add_scalar('valid_loss', valid_loss, epoch)
         valid_acc_cache['Value'].append(valid_acc)
-        end_time = time.time()
-
-        epoch_mins, epoch_secs = epoch_time(start_time, end_time)
 
         if valid_loss < best_valid_loss:
             best_valid_loss = valid_loss
